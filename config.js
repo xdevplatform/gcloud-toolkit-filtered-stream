@@ -2,7 +2,7 @@ var config = {};
 
 config.PORT = 4060;
 
-config.twitter_bearer_token = 'Bearer AAAAAAAAAAAAAAAAAAAAAN1GKgEAAAAA9u1sVz3C7UNeo4vP%2FDedHK%2BLXnY%3D0HzYICdKGJ1GPRKKwMXUppuxI0JE2SXj68c8P7vM36zLsyduGb'
+config.twitter_bearer_token = 'Bearer <<--- INSERT YOUR BEARER TOKEN HERE --->>'
 
 config.filtered_stream = {
     "host" : 'https://api.twitter.com',
@@ -16,7 +16,7 @@ config.filtered_stream = {
 }
 
 config.gcp_infra = {
-    "projectId" : "twttr-des-sa-demo-dev",
+    "projectId" : "<<--- INSERT YOUR GOOGLE PROJECT ID HERE --->>",
     "topicName" : "filtered-stream-test",
     "subscriptionName" : "filtered-stream-test-sub",
     "messageCount" : 10
