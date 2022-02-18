@@ -1,1 +1,2 @@
 runtime: nodejs14
+service: trend_detection
