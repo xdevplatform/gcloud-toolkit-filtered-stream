@@ -11,12 +11,16 @@ router.get("/", function (req, res) {
         if (status != null && status.includes('Successfully provisioned')) {
             gcp_infra_svcs.setupMsgInfra().then(function (statusMsg)    {
                 if (statusMsg != null && statusMsg.includes(config.gcp_infra.topicName)) {
-                    streamTweets();;
-                }
+                    streamTweets();
+                }        
             })
-            res.send("Now streaming tweets ..");
+            res.send("Now streaming tweets with new GCP infra ..");
         }
-    });
+
+    }).catch(error => {
+        streamTweets();
+        res.send("Now streaming tweets with existing GCP infra ..");
+    })
 });
 
 router.get("/clean", function (req, res) {
@@ -67,7 +71,7 @@ async function streamTweets() {
         var splited_payload = '';
         try {
             const json_payload = data.toString();
-            //console.log('json_payload ', json_payload);
+            console.log('Received Tweet ',json_payload.substring(39,45));
             if (json_payload) {
                 try {
                     JSON.parse(json_payload);

@@ -45,7 +45,9 @@ async function synchronousPull(projectId, subscriptionName, maxMessagesToPull) {
         });
     }
     // Insert into BQ
-    await insertStreamResults(tweets);
+    if (tweets.length != 0) {
+       await insertStreamResults(tweets);
+    }
 
     if (ackIds.length !== 0) {
         // Acknowledge all of the messages. You could also ackknowledge
