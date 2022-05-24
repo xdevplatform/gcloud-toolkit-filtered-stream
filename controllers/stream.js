@@ -1,6 +1,5 @@
 const express = require("express");
 const gcp_infra_svcs = require('.././services/gcp-infra.js');
-// const utils = require('.././services/utils.js');
 const config = require('../config.js');
 const needle = require('needle');
 

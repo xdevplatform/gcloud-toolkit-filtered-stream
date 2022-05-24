@@ -2,7 +2,7 @@ var config = {};
 
 config.PORT = 4060;
 
-config.twitter_bearer_token = 'Bearer <<YOUR_BEARER_TOKEN>>'
+config.twitter_bearer_token = 'Bearer AAAAAAAAAAAAAAAAAAAAAN1GKgEAAAAAFf22unggZnDGNF%2B7ugDmsRkoEpE%3D4IGbHNwYGl72Bt6TzraZ6wejg4HnHwHppwgtRMTi1VU9Zbyw1l'
 
 config.filtered_stream = {
     "host" : 'https://api.twitter.com',
@@ -15,8 +15,12 @@ config.filtered_stream = {
     "poll_fields" : 'poll.fields=duration_minutes,end_datetime,id,options,voting_status'
 }
 
+config.filtered_stream.rules = {
+    "api" : 'https://api.twitter.com/2/tweets/search/stream/rules'
+}
+
 config.gcp_infra = {
-    "projectId" : "<<GCP_PROJECT_ID>>",
+    "projectId" : "twttr-des-sa-demo-dev",
     "topicName" : "filtered-stream-test",
     "subscriptionName" : "filtered-stream-test-sub",
     "messageCount" : 10
