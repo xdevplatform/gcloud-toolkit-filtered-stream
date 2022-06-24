@@ -2,7 +2,7 @@ var config = {};
 
 config.PORT = 4060;
 
-config.twitter_bearer_token = 'Bearer <<TOKEN HERE>>'
+config.twitter_bearer_token = 'Bearer AAAAAAAAAAAAAAAAAAAAAN1GKgEAAAAAFf22unggZnDGNF%2B7ugDmsRkoEpE%3D4IGbHNwYGl72Bt6TzraZ6wejg4HnHwHppwgtRMTi1VU9Zbyw1l'
 
 config.filtered_stream = {
     "host" : 'https://api.twitter.com',
@@ -20,13 +20,13 @@ config.filtered_stream.rules = {
 }
 
 config.gcp_infra = {
-    "projectId" : "<<GCP_PROJECT_ID>>",
-    "topicName" : "filtered-stream-test",
-    "subscriptionName" : "filtered-stream-test-sub",
-    "messageCount" : 10
+    "projectId" : "twttr-des-sa-demo-dev",
+    "topicName" : "fs-crypto",
+    "subscriptionName" : "fs-crypto-sub",
+    "messageCount" : 100
 }
 config.gcp_infra.bq = {
-    "dataSetId": "trends_test"
+    "dataSetId": "fs_trends"
 }
 config.gcp_infra.bq.table = {
     "tweets": "tweets",
@@ -34,5 +34,14 @@ config.gcp_infra.bq.table = {
 }
 
 config.reconnectCounter = 3
+
+config.apiKeyMgmt = {
+    "domain_url" : "https://apikeys.googleapis.com/v2/"
+}
+
+config.apiKeyMgmt.key_endpoint = {
+    "url" : config.apiKeyMgmt.domain_url+"projects/"+config.gcp_infra.projectId+"/locations/global/keys"
+}
+
 
 module.exports = config;

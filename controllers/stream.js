@@ -27,6 +27,11 @@ router.get("/clean", function (req, res) {
     res.send('GCP resources deleted');
 });
 
+router.get("/connect", function (req, res) {
+    streamTweets();
+    res.send('Connecting to stream');
+  });
+
 router.get("/alive", function (req, res) {
     //console.log('staying alive ..');
     res.send('Alive');
