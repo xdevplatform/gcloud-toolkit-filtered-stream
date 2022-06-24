@@ -2,7 +2,7 @@ var config = {};
 
 config.PORT = 4060;
 
-config.twitter_bearer_token = 'Bearer AAAAAAAAAAAAAAAAAAAAAN1GKgEAAAAAFf22unggZnDGNF%2B7ugDmsRkoEpE%3D4IGbHNwYGl72Bt6TzraZ6wejg4HnHwHppwgtRMTi1VU9Zbyw1l'
+config.twitter_bearer_token = 'Bearer <<YOUR_TOKEN>>'
 
 config.filtered_stream = {
     "host" : 'https://api.twitter.com',
