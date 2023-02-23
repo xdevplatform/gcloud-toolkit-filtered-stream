@@ -2,7 +2,7 @@ var config = {};
 
 config.PORT = 4060;
 
-config.twitter_bearer_token = 'Bearer <<YOUR_TOKEN>>'
+config.twitter_bearer_token = 'Bearer <<YOUR_BEARER_TOKEN>>'
 
 config.filtered_stream = {
     "host" : 'https://api.twitter.com',
@@ -21,8 +21,8 @@ config.filtered_stream.rules = {
 
 config.gcp_infra = {
     "projectId" : "twttr-des-sa-demo-dev",
-    "topicName" : "fs-crypto",
-    "subscriptionName" : "fs-crypto-sub",
+    "topicName" : "fs1",
+    "subscriptionName" : "fs1-sub",
     "messageCount" : 100
 }
 config.gcp_infra.bq = {

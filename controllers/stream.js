@@ -75,7 +75,7 @@ async function streamTweets() {
         var splited_payload = '';
         try {
             const json_payload = data.toString();
-            console.log('Received Tweet ',json_payload.substring(39,45));
+            console.log('Received Tweet ');
             if (json_payload) {
                 try {
                     JSON.parse(json_payload);
@@ -95,8 +95,8 @@ async function streamTweets() {
                     }
                 }
             }
-        } catch (e) {
-            console.log('Error ', e);
+        } catch (err) {
+            console.log('Error ', err);
             // Keep alive signal received. Do nothing.
         }
     }).on('error', error => {
