@@ -7,7 +7,7 @@ const fs = require('fs');
 
 const pubSubClient = new PubSub();
 const subClient = new v1.SubscriberClient();
-var counter;
+var counter = 0;
 
 async function synchronousPull(projectId, subscriptionName, maxMessagesToPull) {
     const formattedSubscription = subClient.subscriptionPath(
